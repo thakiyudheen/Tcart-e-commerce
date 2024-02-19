@@ -1,0 +1,18 @@
+<%- include("./layout/layout")%>
+
+  <div style="
+  margin-left: 127px;
+  ">
+      <form action="/addproduct" method="post" enctype="multipart/form-data"  >
+          <label for="">name</label><br>
+  <input type="text" name="name"><br>
+  <label for="">about</label><br>
+  <input type="text" name="about"><br>
+  <label for="">price</label><br>
+  <input type="text" name="price"><br>
+  <label for="">image</label><br>
+  <input type="file" name="image"><br><br>
+  <input type="submit" value="ADD" style="background-color:green;">
+  
+      </form>
+  </div> 

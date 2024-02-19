@@ -1,0 +1,88 @@
+<%- include("./layout/layout")%>
+<%- include("./partials/partials")%>
+
+<form action="/place-order" method="post" name="myform">
+
+    <div class="container">
+<div class="row">
+<div class="col-md-6 mt-4 p-5">
+    
+        <h2> Enter Delivery Adress </h2>
+    <label for="">NAME :</label><br>
+<input type="text"class="in" name="name" required><br>
+<label for="">ADRESS :</label><br>
+<input type="text"class="in" name="addres" required><br>
+<label for="">MOBILE NO :</label><br>
+<input type="number"class="in" name="phno" required><br>
+<input type="text" value="<%= data %> " name="totel" hidden>
+
+
+
+</div>
+<div class="col-md-6 mt-5 p-5">
+    
+<div id="border" >
+        <h5 style=" text-align:center">Totel: <span><%= data %> </span>\-</h5>
+        <hr style="width:90%; color:blue; text-align:center">
+    
+    <input type="radio" name="delivery" value="cod"required> <label for="">cash on delivery</label><br>
+    <input type="radio" name="delivery" value="Net banking" required> <label for="">Net banking</label><br><br>
+    <input type="submit"class=" submit" value="submit"><br>
+    
+    
+</div> 
+    
+</div>
+
+</div>
+
+    </div>
+   
+
+
+
+
+
+</form>
+<script>
+
+
+</script>
+
+<style>
+
+.in{
+    width: 100%;
+border-radius: 5px;
+height: 30px;
+}
+
+/* .form{
+
+    border-radius: 10px ;
+    font-family:sans-serif;
+    padding: 10px;
+
+    height: 100%;
+    
+} */
+.submit{
+    width: 100%;
+    background-color:blue;
+    border-radius: 10px;
+    border: 0ch;
+    height: 40px;
+    font-size: 20px;
+    font-family:sans-serif;
+    color: white ;
+
+}
+#border{
+    border: 3px solid black;
+    border-radius: 15px;
+
+    padding: 10px;
+
+}
+
+</style>

@@ -1,0 +1,15 @@
+<%- include("./layout/layout")%>
+<%- include("./partials/partials")%>
+<div class="divs">
+<h2 style="text-align: center; color:green" class="p-5 mt-5" >Order Placed Successfully !!</h2>
+<span id="boot-icon" class="bi bi-check" style="font-size: 102px; color: rgb(0, 128, 55); opacity: 0.8; -webkit-text-stroke-width: 0px; border: solid rgb(0, 128, 55); border-radius: 34%; background-clip: text; background-image: -webkit-linear-gradient(top, rgb(0, 255, 4), rgb(255, 0, 0));"></span>
+<br><a href="/view-product?id=<%= user._id %>" class="btn btn-primary " > View Order </a>
+</div>
+<style>
+    a{
+      text-align: center;
+    }
+    .divs{
+        text-align: center;
+    }
+</style>

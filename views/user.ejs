@@ -1,0 +1,61 @@
+<style>
+
+    #Select {
+  width: 20px;
+  border-radius: 5px;
+    }
+  </style>
+  
+  
+  
+  
+  
+  <section>
+    <div class="container">
+
+  <div class="row m-5">
+  
+ <% product1.forEach(item => { %>
+  <div class="col-md-3 p-5">
+  
+    <div class="card" style="width: 14rem;height:23rem; ">
+      <img src="images/productImg/<%= item._id%>.jpg" class="card-img-top" alt="not found" style="height:12rem; width:12rem;">
+      <div class="card-body">
+        <h5 class="card-title" ><%= item.name %></h5>
+        <h5><%= item.price%></h5>
+        
+        <p class="card-text" style="font-size: 10px;"><%= item.about%></p>
+        <a href="/add-cart?id=<%= item._id %>" class="btn btn-primary">add to cart </a>
+        
+      </div>
+</div>
+</div>
+ <% }) %>%>
+      
+      
+     
+  
+     
+    
+  </div>
+  </div>
+  </section>
+ <!-- <script>
+
+function count(id){
+    console.log("aim ok tta ")
+    $.ajax(
+        {
+            url:'/add-cart?id='+id,
+            method:'get',
+            success:(response)=>{
+                if(response.status){
+                    alert("iknkbjhbgcfilivgdxjyzgtghcyuf")
+                }
+            }
+        }
+    ) 
+}
+ </script>
+
+  

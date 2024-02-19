@@ -1,0 +1,26 @@
+<%- include("./layout/layout")%>
+
+  <div style="
+  margin-left: 127px;
+  ">
+      <form action="/edit?id=<%- data._id %>" method="post" enctype="multipart/form-data"  >
+          <label for="">name</label><br>
+  <input type="text" name="name" value="<%- data.name %>"><br>
+  <label for="">about</label><br>
+  <input type="text" name="about" value="<%- data.about %>"><br>y
+  <label for="">price</label><br>
+  <input type="text" name="price" value="<%- data.price %>"><br>
+  <label for="">image</label><br>
+  
+  <img src="images/productImg/<%- data._id %>.jpg" alt="No" id="imgs" style="height: 70px; width: 40px;"><br><br>
+  <input type="file" name="image"  onchange="change(event)"  ><br><br>
+  <input type="submit" value="ADD" style="background-color:green;" >
+  
+      </form>
+  </div> 
+  <script>
+    function change(event){
+        
+        document.getElementById('imgs').src=URL.createObjectURL(event.target.files[0])
+    }
+  </script>
